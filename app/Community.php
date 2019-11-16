@@ -8,11 +8,13 @@ use App\Topic;
 
 class Community extends Model
 {
-    public function schedule() {
-        return $this->belongsTo(Schedule::class);
+    protected $fillable = ['name'];
+    
+    public function schedules() {
+        return $this->hasMany(Schedule::class);
     }
 
-    public function topic() {
-        return $this->belongsTo(Topic::class);
+    public function topics() {
+        return $this->hasMany(Topic::class);
     }
 }
