@@ -9,7 +9,7 @@ use App\Comment;
 
 class Post extends Model
 {
-    protected $fillable = ['slug', 'content', 'user_id', 'topic_id'];
+    protected $fillable = ['title', 'content', 'user_id', 'topic_id'];
 
     public function users() {
         return $this->belongsTo(User::class);

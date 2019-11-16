@@ -19,7 +19,7 @@ Route::view('tranding', 'components/content_tranding');
 
 Route::view('create_post', 'components/create_post');
 
-Route::view('post', 'components/post');
+Route::resource('post', 'PostController')->only(['store', 'show']);
 
 Auth::routes();
 
