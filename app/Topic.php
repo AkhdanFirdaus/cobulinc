@@ -18,9 +18,4 @@ class Topic extends Model
     public function community() {
         return $this->belongsTo(Community::class);
     }
-
-    public function schedule() {
-        return $this->belongsTo(Schedule::class);
-    }
-
 }
