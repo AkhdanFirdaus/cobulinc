@@ -10,9 +10,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://kit.fontawesome.com/6c4e910690.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/custom.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -78,6 +78,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <script src="{{ asset('js/custom.js') }}"></script>
+        @yield('script')
     </div>
 </body>
 </html>
