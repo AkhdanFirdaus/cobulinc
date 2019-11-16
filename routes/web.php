@@ -24,3 +24,5 @@ Route::resource('post', 'PostController')->only(['store', 'show']);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::view('singlepost', 'post')->name('singlepost');
