@@ -16,10 +16,10 @@ class CreateCommunitiesTable extends Migration
         Schema::create('communities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('schedule_id');
-            $table->foreign('schedule_id')->reference('id')->on('schedules')->onDelete('cascade');
-            $table->integer('topic_id');
-            $table->foreign('topic_id')->reference('id')->on('topics')->onDelete('cascade');
+            $table->unsignedBigInteger('schedule_id');
+            $table->foreign('schedule_id')->references('id')->on('schedules')->onDelete('cascade');
+            $table->unsignedBigInteger('topic_id');
+            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -31,6 +31,9 @@ class CreateCommunitiesTable extends Migration
      */
     public function down()
     {
+        Schema::table('communities', function(Blueprint $table) {
+            $table->dropForeign(['schedule_id', 'topic_id']);
+        });
         Schema::dropIfExists('communities');
     }
 }

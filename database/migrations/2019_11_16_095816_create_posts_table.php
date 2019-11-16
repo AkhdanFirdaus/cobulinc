@@ -17,10 +17,10 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('slug')->unique();
             $table->text('content');
-            $table->integer('user_id');
-            $table->foreign('user_id')->reference('id')->on('users')->onDelete('cascade');
-            $table->integer('topic_id');
-            $table->foreign('topic_id')->reference('id')->on('topics')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('topic_id');
+            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +32,9 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
+        Schema::table('posts', function(Blueprint $table) {
+            $table->dropForeign(['user_id', 'topic_id']);
+        });
         Schema::dropIfExists('posts');
     }
 }
