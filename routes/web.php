@@ -20,6 +20,8 @@ Route::view('tranding', 'components/content_tranding');
 Route::view('create_post', 'components/create_post');
 
 Route::view('post', 'components/post');
+Route::view('landing', 'components/landing');
+Route::view('java', 'components/java')->name('java');
 
 Auth::routes();
 

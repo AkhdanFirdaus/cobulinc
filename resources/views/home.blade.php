@@ -12,6 +12,7 @@
             @include('components.list_community')
             @include('components.mycommunity')
         </div>
+        
     </div>
 </div>
 @endsection
