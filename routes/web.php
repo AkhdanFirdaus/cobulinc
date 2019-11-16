@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('components/edit_profile');
+    return view('welcome');
 });
 
 Route::view('tranding', 'components/content_tranding');
@@ -20,6 +20,10 @@ Route::view('tranding', 'components/content_tranding');
 Route::view('create_post', 'components/create_post');
 
 Route::view('post', 'components/post');
+
+Route::view('profile', 'components/profile');
+
+Route::view('edit_profile', 'components/edit_profile');
 
 Auth::routes();
 
