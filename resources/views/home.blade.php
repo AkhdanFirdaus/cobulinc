@@ -2,8 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    @include('components.content_trending')
+    <div class="row">
         <div class="col-md-8">
+            @include('components.create_post')
+            @include('components.post')
+        </div>
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 

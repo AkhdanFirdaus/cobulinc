@@ -15,17 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('tranding', function () {
-    return view('components/content_tranding');
-});
+Route::view('tranding', 'components/content_tranding');
 
-Route::get('create_post', function () {
-    return view('components/create_post');
-});
+Route::view('create_post', 'components/create_post');
 
-Route::get('post', function () {
-    return view('components/post');
-});
+Route::view('post', 'components/post');
 
 Auth::routes();
 
