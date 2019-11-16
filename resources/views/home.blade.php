@@ -6,7 +6,9 @@
     <div class="row">
         <div class="col-md-8">
             @include('components.create_post')
-            @include('components.post')
+            <div class="card-deck">
+                @include('components.list_post')
+            </div>
         </div>
         <div class="col-md-4">
             @include('components.list_community')
