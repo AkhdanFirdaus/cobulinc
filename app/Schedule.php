@@ -9,18 +9,14 @@ use App\Room;
 
 class Schedule extends Model
 {
-    protected $fillable = ['date_time_start', 'duration', 'room_id'];
-
-    public function communities() {
-        return $this->hasMany(Community::class);
-    }
-
-    public function topics() {
-        return $this->hasMany(Topic::class);
-    }
+    protected $fillable = ['date_time_start', 'duration', 'room_id', 'comunity_id'];
 
     public function room()
     {
         return $this->belongsTo(Room::class);
+    }
+
+    public function community() {
+        return $this->belongsTo(Community::class);
     }
 }
