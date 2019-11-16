@@ -9,7 +9,7 @@ use App\Comment;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'content', 'user_id', 'topic_id'];
+    protected $fillable = ['slug', 'title', 'content', 'user_id', 'topic_id'];
 
     public function users() {
         return $this->belongsTo(User::class);
@@ -26,6 +26,7 @@ class Post extends Model
     public function setTitleAttribute($value) {
         if (! $this->exist) {
             $this->attributes['slug'] = str_slug($value);
+            $this->attributes['title'] = $value;
         }
     }
 }

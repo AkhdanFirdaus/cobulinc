@@ -6,14 +6,13 @@
         <div class="form-group">
             <div class="input-group flex-nowrap">
                 <div class="input-group-prepend"><button class="btn btn-primary togglekonten"><i class="fas fa-plus"></i></button></div>
-                <input type="text" class="form-control" placeholder="Create Post" aria-label="Create Post"
-                    aria-describedby="addon-wrapping" name="title">
+                <input type="text" class="form-control" placeholder="Create Post" aria-label="Create Post" aria-describedby="addon-wrapping" name="title">
             </div>
         </div>
         <div id="postform">
             <div class="form-group">
                 <label for="content">Content</label>
-                <textarea name="content" id="ckonten" cols="30" rows="10" class="form-control" placeholder="Your Content"></textarea>
+                <textarea name="content" id="ckonten" cols="30" rows="10" class="form-control" id="summary-ckeditor"></textarea>
             </div>
             <div class="form-group">
                 <label for="topic_id">Topik</label>
@@ -33,8 +32,8 @@
 </div>
 
 @section('script')
-<script src="{{ asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+<script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
 <script>
-    $('#ckonten').ckeditor();
+    CKEDITOR.replace('ckonten');
 </script>
 @endsection

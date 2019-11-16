@@ -40,7 +40,6 @@ class PostController extends Controller
         $post->content = $request->content;
         $post->user_id = $request->user()->id;
         $post->topic_id = $request->topic_id;
-        dd($post);
         $post->save();
         return redirect()->back();
     }
