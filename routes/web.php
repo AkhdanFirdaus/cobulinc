@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('components/edit_profile');
 });
 
 Route::view('tranding', 'components/content_tranding');
