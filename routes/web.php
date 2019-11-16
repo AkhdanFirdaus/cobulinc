@@ -15,6 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('tranding', function () {
+    return view('components/content_tranding');
+});
+
+Route::get('create_post', function () {
+    return view('components/create_post');
+});
+
+Route::get('post', function () {
+    return view('components/post');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
