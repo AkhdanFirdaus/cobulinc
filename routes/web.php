@@ -19,14 +19,11 @@ Route::view('tranding', 'components/content_tranding');
 
 Route::view('create_post', 'components/create_post');
 
-<<<<<<< HEAD
-Route::view('post', 'components/post');
 Route::view('landing', 'components/landing');
-Route::view('java', 'components/java')->name('java');
-=======
-Route::resource('post', 'PostController')->only(['store', 'show']);
->>>>>>> frontend_akhdan
+// Route::resource('post', 'PostController')->only(['store', 'show']);
 
+Route::view('login', 'auth/login')->name('login');
+Route::view('register', 'auth/register')->name('register');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
