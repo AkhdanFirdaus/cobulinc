@@ -15,6 +15,10 @@
                 <textarea name="content" id="ckonten" cols="30" rows="10" class="form-control" id="summary-ckeditor"></textarea>
             </div>
             <div class="form-group">
+                <label for="content">Short Description</label>
+                <textarea name="short_description" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
                 <label for="topic_id">Topik</label>
                 <select name="topic_id" id="topic_id" class="custom-select">
                     <option selected>Pilih Topik</option>

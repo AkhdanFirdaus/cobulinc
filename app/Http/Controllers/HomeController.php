@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Topic;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $topics = Topic::all();
-        return view('home', ['topics' => $topics]);
+        $posts = Post::paginate(5);
+        return view('home', compact('topics', 'posts'));
     }
 }

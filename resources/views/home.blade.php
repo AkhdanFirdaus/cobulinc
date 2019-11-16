@@ -6,9 +6,8 @@
     <div class="row">
         <div class="col-md-8">
             @include('components.create_post')
-            <div class="card-deck">
-                @include('components.list_post')
-            </div>
+            @include('components.list_post')
+            {{ $posts->links() }}
         </div>
         <div class="col-md-4">
             @include('components.list_community')
