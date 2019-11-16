@@ -13,7 +13,6 @@
 
                     <a href="" class="btn-one">Read More</a>
                     <a href="" class="btn-two">Contact Us </a>
-                    <img src="{{asset('img/background.png')}}" alt="" class="feature-img">
                 </div>
             </div>
             <div class="col-md-6">
