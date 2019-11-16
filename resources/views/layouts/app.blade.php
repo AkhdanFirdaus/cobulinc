@@ -28,7 +28,6 @@
         <main class="py-4">
             @yield('content')
         </main>
-
     </div>
     
     <script src="{{ asset('js/custom.js') }}"></script>

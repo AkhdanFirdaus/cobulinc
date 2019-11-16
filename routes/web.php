@@ -15,14 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('tranding', 'components/content_tranding');
+Route::view('trending', 'components/content_trending');
 
 Route::view('create_post', 'components/create_post');
 
-Route::resource('post', 'PostController')->only(['store', 'show']);
+Route::resource('post', 'PostController')->only(['store', 'show'])->parameters(['post' => 'slug']);
+
+Route::resource('comment', 'CommentController')->only(['store']);
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::view('singlepost', 'post')->name('singlepost');
