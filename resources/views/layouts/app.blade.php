@@ -26,9 +26,9 @@
 </head>
 <body>
     <div id="app">
-        @if(!Request::is('login'))
+        {{-- @if(!Request::is('login')) --}}
         @include('components.navbar')
-        @endif
+        {{-- @endif --}}
         <main class="py-4">
             @yield('content')
         </main>
