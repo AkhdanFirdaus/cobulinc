@@ -1,4 +1,4 @@
-<div class="list-group">
+<div class="list-group border-0 shadow-sm">
   <a href="#" class="list-group-item list-group-item-action active">
     My List
   </a>
