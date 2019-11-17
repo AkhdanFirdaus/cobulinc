@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\URL;
 use Illuminate\Http\Request;
 use App\Comment;
 
@@ -74,7 +75,16 @@ class CommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'comment' => 'required',
+        ]);
+        $comment = Comment::find($id);
+        if($comment){
+            $comment->update([
+                'comment' => $request->comment
+            ]);
+        }
+        return redirect(url()->previous());
     }
 
     /**

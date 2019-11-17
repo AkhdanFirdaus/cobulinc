@@ -21,7 +21,7 @@ Route::view('create_post', 'components/create_post');
 
 Route::resource('post', 'PostController')->only(['store', 'show'])->parameters(['post' => 'slug']);
 
-Route::resource('comment', 'CommentController')->only(['store']);
+Route::resource('comment', 'CommentController')->only(['store', 'update']);
 
 Route::view('login', 'auth/login')->name('login');
 Route::view('register', 'auth/register')->name('register');
