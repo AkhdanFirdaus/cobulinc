@@ -15,8 +15,7 @@
             </div>
             @endif
             @include('components.create_post')
-            <h2 class="heading mt-3">Semua Artikel</h2>
-            <p>Jumlah Artikel: {{ $posts->count() }}</p>
+            <h2 class="heading mt-3">Semua Artikel - <small class="badge badge-primary">{{ $posts->count() }}</small></h2>
             @include('components.list_post')
             {{ $posts->links() }}
         </div>
