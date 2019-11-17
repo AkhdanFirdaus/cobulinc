@@ -25,6 +25,7 @@ Route::resource('comment', 'CommentController')->only(['store']);
 
 Route::view('login', 'auth/login')->name('login');
 Route::view('register', 'auth/register')->name('register');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
