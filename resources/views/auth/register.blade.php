@@ -1,21 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<<<<<<< HEAD
-
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-=======
 <section class="testimonial py-5" id="testimonial">
     <div class="container">
         <div class="row ">
@@ -24,10 +8,7 @@
                     <div class="card-body">
                         <img src="{{asset('img/undraw_fill_forms_yltj.svg')}}" style="width:100%;">
                         <h2 class="py-3">Registration</h2>
-                        <p>if you want to join you can create account in here
->>>>>>> frontend_farhan
-
-</p>
+                        <p>if you want to join you can create account in her</p>
                     </div>
                 </div>
             </div>
