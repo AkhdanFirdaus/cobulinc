@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'landing')->name('index');
 
 Route::view('tranding', 'components/content_tranding');
 
 Route::view('create_post', 'components/create_post');
 
-Route::view('landing', 'components/landing');
 // Route::resource('post', 'PostController')->only(['store', 'show']);
 
 Route::view('login', 'auth/login')->name('login');
