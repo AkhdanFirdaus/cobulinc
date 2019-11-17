@@ -32,12 +32,12 @@ textarea {
     background: #FFA804; 
 }
 .login-block {
-    background: #3C40C6;
+    /* background: #3C40C6;
     background: -webkit-linear-gradient(to bottom, #48dbfb, #3C40C6);
-    background: linear-gradient(to bottom, #48dbfb, #3C40C6);
+    background: linear-gradient(to bottom, #48dbfb, #3C40C6); */
     float: left;
     width: 100%;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 .banner-sec {
@@ -46,20 +46,6 @@ textarea {
     min-height: 500px;
     border-radius: 0 10px 10px 0;
     padding: 0;
-}
-
-.container {
-    background: #fff;
-    border-radius: 10px;
-}
-
-.carousel-inner {
-    border-radius: 0 10px 10px 0;
-}
-
-.carousel-caption {
-    text-align: left;
-    left: 5%;
 }
 
 .login-sec {

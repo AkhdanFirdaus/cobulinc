@@ -1,9 +1,15 @@
+  
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 <section class="login-block">
     <div class="container">
+=======
+<section class="login-block">
+    <div class="container bg-white rounded">
+>>>>>>> 1c9eb9026633b42c52d0d248fa8dfb9cff36d3db
 	<div class="row">
 		<div class="col-md-4 login-sec">
 		    <h2 class="text-center">Login Now</h2>
@@ -34,8 +40,12 @@
       <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
       <small>{{ __('Remember Me') }}</small>
     </label>
+<<<<<<< HEAD
     <a href="{{route('register')}}" class="btn btn-line">Register</a>
      
+=======
+      {{-- <a href="{{route('register')}}" class="btn btn-line">Register</a> --}}
+>>>>>>> 1c9eb9026633b42c52d0d248fa8dfb9cff36d3db
     <button type="submit" class="btn btn-login float-right">{{ __('Login') }}</button>
   </div>
   
@@ -44,6 +54,10 @@
 		<div class="col-md-8 banner-sec">
 	</div>
 </div>
+<<<<<<< HEAD
+=======
+</section>
+>>>>>>> 1c9eb9026633b42c52d0d248fa8dfb9cff36d3db
 
 
 @endsection
