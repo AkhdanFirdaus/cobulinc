@@ -5,6 +5,15 @@
     @include('components.content_trending')
     <div class="row">
         <div class="col-md-8">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             @include('components.create_post')
             @include('components.list_post')
             {{ $posts->links() }}

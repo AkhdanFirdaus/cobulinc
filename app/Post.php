@@ -29,4 +29,16 @@ class Post extends Model
             $this->attributes['title'] = $value;
         }
     }
+
+    public function getImageAttribute()
+    {
+        $path = !empty($this->attributes['image']) && file_exists(public_path('\images\post')) ? asset($this->attributes['image']) : false;
+        return $path;
+    }
+
+    public function getThumbnailAttribute()
+    {
+        $path = !empty($this->attributes['thumbnail']) && file_exists(public_path('\images\post')) ? asset($this->attributes['thumbnail']) : false;
+        return $path;
+    }
 }

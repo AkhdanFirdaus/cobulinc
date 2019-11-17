@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <form action="{{ route('post.store') }}" method="POST">
+        <form action="{{ route('post.store') }}" enctype="multipart/form-data" method="POST">
         @csrf
         @method('POST')
         <div class="form-group">
@@ -11,12 +11,16 @@
         </div>
         <div id="postform">
             <div class="form-group">
+                <label for="exampleFormControlFile1">Image</label>
+                <input type="file" name="image" accept="image/*" class="form-control-file" id="image">
+            </div>
+            <div class="form-group">
                 <label for="content">Content</label>
                 <textarea name="content" id="ckonten" cols="30" rows="10" class="form-control" id="summary-ckeditor"></textarea>
             </div>
             <div class="form-group">
                 <label for="content">Short Description</label>
-                <textarea name="short_description" cols="30" rows="10" class="form-control"></textarea>
+                <textarea name="short_description" cols="30" rows="3" class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <label for="topic_id">Topik</label>
