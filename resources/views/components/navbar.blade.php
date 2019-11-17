@@ -1,5 +1,7 @@
+
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
+    <img src="{{asset('img/logo_transparent.png')}}" width="60px">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{ asset('logo/logo_transparent.png') }}" alt="logo" width="50px" class="img-fluid">
             {{ config('app.name', 'Laravel') }}
