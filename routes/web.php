@@ -13,11 +13,13 @@
 
 Route::view('/', 'landing')->name('index');
 
-Route::view('tranding', 'components/content_tranding');
+Route::view('trending', 'components/content_trending');
 
 Route::view('create_post', 'components/create_post');
 
-// Route::resource('post', 'PostController')->only(['store', 'show']);
+Route::resource('post', 'PostController')->only(['store', 'show'])->parameters(['post' => 'slug']);
+
+Route::resource('comment', 'CommentController')->only(['store']);
 
 Route::view('login', 'auth/login')->name('login');
 Route::view('register', 'auth/register')->name('register');

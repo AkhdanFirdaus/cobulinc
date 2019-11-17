@@ -2,6 +2,7 @@
     margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 .wrapper {
     margin: 40px auto;
     border-radius: 10px;
@@ -9,3 +10,8 @@
     padding-bottom: 50px;
     box-shadow: 0 0 40px 2px rgba(37, 73, 214, 0.18);
 }
+=======
+textarea {
+  resize: none;
+}
+>>>>>>> master
