@@ -5,7 +5,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ $post->title }}</h5>
             <p>{{ $post->short_description }}</p>
-            <a href="{{ url('post/' . $post->id) }}" class="btn btn-primary">Read More</a>
+            <a href="{{ route('post.show', $post->slug) }}" class="btn btn-primary">Read More</a>
         </div>
     </div>
 </div>

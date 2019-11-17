@@ -11,8 +11,10 @@
         </div>
         <div id="postform">
             <div class="form-group">
-                <label for="exampleFormControlFile1">Image</label>
-                <input type="file" name="image" accept="image/*" class="form-control-file" id="image">
+                <div class="custom-file">
+                    <label class="custom-file-label" for="customFile">Post Cover</label>
+                    <input type="file" name="image" accept="image/*" class="custom-file-input" id="image">
+                </div>
             </div>
             <div class="form-group">
                 <label for="content">Content</label>
