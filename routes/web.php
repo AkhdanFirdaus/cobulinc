@@ -21,6 +21,7 @@ Route::view('create_post', 'components/create_post');
 
 Route::view('landing', 'components/landing');
 // Route::resource('post', 'PostController')->only(['store', 'show']);
+Route::view('admin', 'admin/index');
 
 Route::view('login', 'auth/login')->name('login');
 Route::view('register', 'auth/register')->name('register');

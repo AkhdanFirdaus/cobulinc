@@ -22,6 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
      <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -29,7 +30,8 @@
         <main class="py-4">
             @yield('content')
         </main>
-
+        <script src="{{ asset('plugin/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('plugin/jquery-ui/jquery-ui.min.js') }}"></script>
         <script src="{{ asset('js/custom.js') }}"></script>
         @yield('script')
     </div>
