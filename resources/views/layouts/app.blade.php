@@ -21,7 +21,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -29,6 +28,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <div class="backBtn">
+            <button onclick="history.go(-1)" class="btn btn-link rounded-circle"><span><i class="fas fa-arrow-left fa-2x"></i></span></button>
+        </div>
     </div>
     
     <script src="{{ asset('js/custom.js') }}"></script>

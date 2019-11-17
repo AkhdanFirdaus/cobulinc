@@ -2,16 +2,32 @@
     margin-bottom: 15px;
 }
 
-<<<<<<< HEAD
-.wrapper {
-    margin: 40px auto;
-    border-radius: 10px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    box-shadow: 0 0 40px 2px rgba(37, 73, 214, 0.18);
-}
-=======
 textarea {
-  resize: none;
+    resize: none;
 }
->>>>>>> master
+
+.backBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+.backBtn button {
+    width: 50px;
+    height: 50px;
+}
+.backBtn button:hover {
+    background-color: #FFA159;
+    color: #fff;
+}
+
+.heading:before{ 
+    content:''; 
+    height: 10px; 
+    width: 50px; 
+    border-radius: 5px;
+    margin-bottom: 5px; 
+    margin-top: 20px;
+    display: block; 
+    background: #FFA804; 
+}

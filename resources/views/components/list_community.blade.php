@@ -1,5 +1,4 @@
-
-<div class="list-group mt-4">
+<div class="list-group">
   <a href="#" class="list-group-item list-group-item-action active">
     My List
   </a>

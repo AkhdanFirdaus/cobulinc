@@ -13,6 +13,8 @@
 
 Route::view('/', 'landing')->name('index');
 
+Route::get('start', 'Controller@ceklogin')->name('start');
+
 Route::view('trending', 'components/content_trending');
 
 Route::view('create_post', 'components/create_post');

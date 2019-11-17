@@ -1,4 +1,4 @@
-<div class="form-group py-3">
+<div class="form-group">
     <h3 for="">Tambahkan Komentar?</h3>
     <form action="{{ route('comment.store') }}" method="POST">
         @csrf
@@ -11,15 +11,15 @@
     </form>
     <label for="" class="float-right">Anda berkomentar sebagai <strong>{{ Auth::user()->name }}</strong></label>
 </div>
-<hr>
-<ul class="list-group">
+<br>
+<ul class="list-group mt-5">
     @foreach ($post->comments as $key => $comment)
     <li class="list-group-item">
         <div class="media">
             <img src="https:/picsum.photos/50" alt="avatar" class="img-fluid rounded-circle mr-3">
             <div class="media-body">
                 <h5 class="my-0">{{ $comment->user->name }}</h5>
-                <small class="d-block mb-2">{{ $comment->created_at }}</small>
+                <small class="d-block mb-2">{{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}</small>
                 <p>{{ $comment->comment }}</p>
             </div>
         </div>
