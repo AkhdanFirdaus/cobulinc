@@ -4,7 +4,7 @@
 <div class="container-fluid my-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <img src="https://picsum.photos/800/200" class="img-fluid w-100" alt="">
+            <img src="{{ !$post->thumbnail ? 'https://picsum.photos/800/200' : $post->thumbnail }}" class="img-fluid w-100" alt="">
             <div>
                 <h1 class="display-4 heading">{{ ucwords($post->title) }}</h1>
                 <p>{!! $post->content !!}</p>
