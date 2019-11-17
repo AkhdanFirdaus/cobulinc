@@ -22,10 +22,13 @@
     <link rel="shortcut icon" href="{{ asset('logo/favicon.png') }}" type="image/x-icon">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    @yield('styles')
 </head>
 <body>
     <div id="app">
+        @if(!Request::is('login'))
         @include('components.navbar')
+        @endif
         <main class="py-4">
             @yield('content')
         </main>
